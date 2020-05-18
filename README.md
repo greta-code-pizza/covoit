@@ -1,7 +1,8 @@
 # Guide
 
-## run Composer install
-## make a .env file like .env.example
+#### run Composer install
+#### make a .env file like .env.example
+#### install  Heroku Client : https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
-
-### https://covoit-greta.herokuapp.com/
+### App url
+##### https://covoit-greta.herokuapp.com/
