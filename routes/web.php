@@ -15,3 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'TokenController@generateToken');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('contact', 'ContactController@show');
+Route::Post('contact', 'ContactController@store');

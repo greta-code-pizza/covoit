@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    It's WORKING !
+                    Cool sa fonctionne !!!
                 </div>
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
