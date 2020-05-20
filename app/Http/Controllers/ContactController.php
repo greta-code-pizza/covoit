@@ -21,15 +21,7 @@ class ContactController extends Controller
                     ->subject('Test envoi mail');
         });
 
-        $mail = array(
-            'boby@gmail.com'=>'648a6c6eb3ff4ce7b3016b4f29458c6b',
-            'test@test.com'=> '1234'
+        return redirect('/contact');
 
-    );
-        if(key_exists(request('email'),$mail) === true){
-            return redirect('/contact/?token=' . TokenController::generateToken());
-        }
-        
-        
     }
 }
