@@ -86,6 +86,7 @@
                 <div class="links">
                     <a href="{{ route('contact') }}">Contact</a>
                     <a href="{{ route('creation-trajet') }}">Nouveau Trajet</a>
+                    <a href="{{ route('demande-trajet') }}">Demande Trajet</a>
                 </div>
             </div>
         </div>
