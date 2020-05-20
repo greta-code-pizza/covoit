@@ -27,11 +27,9 @@ class ContactController extends Controller
 
     );
         if(key_exists(request('email'),$mail) === true){
-            return redirect('/contact/' . $mail[request('email')]);
+            return redirect('/contact/?token=' . TokenController::generateToken());
         }
-        else{
-            dd($mail);
-        }
+        
         
     }
 }
