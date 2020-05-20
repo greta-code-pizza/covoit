@@ -19,5 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('contact', 'ContactController@show');
+Route::get('contact', 'ContactController@show')->name('contact');
 Route::Post('contact', 'ContactController@store');

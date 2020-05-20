@@ -84,7 +84,7 @@
                     GRETA Covoit
                 </div>
                 <div class="links">
-                    <a href="/">Contact</a>
+                    <a href="{{route('contact')}}">Contact</a>
                 </div>
             </div>
         </div>
