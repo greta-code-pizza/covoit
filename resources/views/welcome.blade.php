@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Cool sa fonctionne !!!
+                    Cool ça fonctionne !!!
                 </div>
 
                 <div class="links">
