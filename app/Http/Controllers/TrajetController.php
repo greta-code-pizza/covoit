@@ -1,6 +1,4 @@
 <?php
-// Ce controller est obsolète ! 
-// si un ajout est necessaire faites le dans le TrajetController
 
 namespace App\Http\Controllers;
 
@@ -8,8 +6,21 @@ use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class CreationTrajetController extends Controller
+class TrajetController extends Controller
 {
+    public static function generateToken()
+    {
+        $salt = "le sel c'est super";
+        $hash = hash('ripemd160', $_POST['email'] . $salt);
+        
+        
+        foreach (Contact::WHITELIST as $value) {
+            if (hash('ripemd160', $value . $salt) === $hash) {
+                return $hash;
+            }
+        }
+    }
+
     public function show()
     {
         return view ('creation-trajet');
@@ -26,7 +37,10 @@ class CreationTrajetController extends Controller
                         ->subject('Test création trajet');
             });
 
-            return redirect('/creation-trajet?token=' . TrajetController::verifyToken());
+            return view('testToken');
+        }else{
+            return redirect('/erreur');
         }
     }
 }
+
