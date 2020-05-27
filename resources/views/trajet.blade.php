@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-   <h1>SALUT LES GITANTS</h1> 
+
 </body>
 </html>
