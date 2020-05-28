@@ -199,7 +199,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Covoit GRETA de Vannes !!!
+                    GRETA Covoit
                 </div>
                 <div class="links">
                     <a href="{{ route('contact') }}">Contact</a>
