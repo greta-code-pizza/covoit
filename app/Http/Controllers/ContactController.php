@@ -34,5 +34,5 @@ class ContactController extends Controller
             "<a href=/>Retour à l'accueil</a>";   
         }        
     }
+  }
 
-}
