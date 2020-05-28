@@ -21,7 +21,29 @@ class DemandeTrajetController extends Controller
                     ->subject('Test Demande Trajet');
         });
 
-        return redirect('/demande-trajet');
+        return "Votre participation à été prise en compte .".
+        "<br>".
+        "<a href='/'>Retour à l'accueil</a>";
 
     }
+    // public function storeTestToken()
+    // {
+    //     request()->validate(['email' => 'required|email']);
+    //     //Send Email
+    //     Mail::html(
+    //         request('nom') . " " . request('prenom') . " est interressé pour faire le chemin avec vous" .
+    //         "<br>".
+    //         "Vous pouvez prendre contact avec cette personne à l'adresse suivante : ".
+    //         "<br>".
+    //         request('email')
+        
+        
+    //     , function ($message){       
+    //         $message->to(request('email'))
+    //                 ->subject('test token');
+    //     });
+
+    //     return redirect('/');
+
+    // }
 }

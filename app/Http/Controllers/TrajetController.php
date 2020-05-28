@@ -23,22 +23,34 @@ class TrajetController extends Controller
 
     public function show()
     {
-        return view ('creation-trajet');
+        return view('creation-trajet');
     }
-
     public function store()
     {
         request()->validate(['email' => 'required|email']);
         //Send Email
-     
+        
         if (in_array(request('email'), Contact::WHITELIST) === true) {
             Mail::raw('Le trajet de ' . request('ville') . ' au GRETA a été crée', function ($message) {
                 $message->to(request('email'))
-                        ->subject('Test création trajet');
+                        ->subject('Un trajet à été crée');
+               
+                //Send mail to all member in the whitelist
+                foreach (Contact::WHITELIST as $contact) {
+                    Mail::html("<p>Un trajet de ". request('ville') ." au GRETA de Vannes a été crée par ". request('nom'). " " . request('prenom'). "</p>" .
+                    "<p>Si vous êtes interessé par ce trajet, veuillez cliquer sur le lien ci-dessous</p>" .
+                    "<br>" .
+                    "<a href='http://covoit.test/demande-trajet/". TrajetController::generateToken()."'>". request('ville'). " au Greta de Vannes</a>"
+                    , function ($message) use ($contact) {
+
+                                $message->to($contact)
+                                        ->subject('Alerte création de trajet');
+                    });
+                }
             });
 
-            return view('testToken');
-        }else{
+            return "Votre trajet à bien été crée" . "<br>" . "<a href='/'>Retour à l'accueil</a>";
+        } else {
             return redirect('/erreur');
         }
     }
