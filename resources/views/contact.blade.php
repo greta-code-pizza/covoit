@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Mailing List</h1>
+
     <p>Pour savoir si vous êtes inscrit à la Mailing Liste, veuillez entrer votre Email ci-dessous</p>
     <form method="POST" action="/contact">
         @csrf
