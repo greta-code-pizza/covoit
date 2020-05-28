@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -16,12 +17,22 @@ class ContactController extends Controller
     {
         request()->validate(['email' => 'required|email']);
         //Send Email
-        Mail::raw('Sa marche !!!', function ($message){       
-            $message->to(request('email'))
-                    ->subject('Test envoi mail');
-        });
-
-        return redirect('/contact');
-
+        if (in_array(request('email'), Contact::WHITELIST) === true) {
+            // Mail::raw('Le trajet de ' . request('ville') . ' au GRETA a été crée', function ($message) {
+            //     $message->to(request('email'))
+            //             ->subject('Test création trajet');
+            // });
+        return "Vous êtes bien inscrit à la Mailing Liste".
+        "<br>".
+        "<a href=/>Retour à l'accueil</a>";
+        }        
+        else{
+            return "Vous n'êtes pas inscrit à la Mailing List".
+            "<br>".
+            "Pour vous inscrire, veuillez contacter un administrateur sur ..........".
+            "<br>".
+            "<a href=/>Retour à l'accueil</a>";   
+        }        
     }
-}
+  }
+

@@ -18,15 +18,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/erreur', function () {
+    return view('errorToken');
+});
 
 Route::get('contact', 'ContactController@show')->name('contact');
 Route::Post('contact', 'ContactController@store');
 
-Route::get('creation-trajet', 'CreationTrajetController@show')->name('creation-trajet');
-Route::Post('creation-trajet', 'CreationTrajetController@store');
+Route::get('creation-trajet', 'TrajetController@show')->name('creation-trajet');
+Route::Post('creation-trajet', 'TrajetController@store');
 
-Route::get('demande-trajet', 'DemandeTrajetController@show')->name('demande-trajet');
-Route::Post('demande-trajet', 'DemandeTrajetController@store');
+Route::get('demande-trajet','DemandeTrajetController@show')->name('demande-trajet');
+Route::Post('demande-trajet','DemandeTrajetController@store');
 
-
-
+Route::get('demande-trajet/{token}', function () {
+    return view("demande-trajet");
+});
+// Route::get('demande-trajet', 'DemandeTrajetController@show')->name('demande-trajet');
+// Route::Post('demande-trajet', 'DemandeTrajetController@store');
