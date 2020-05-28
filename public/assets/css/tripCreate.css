@@ -1,0 +1,46 @@
+.tripCreate{
+    text-align: center;
+}
+
+.tripCreate h1{
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.tripCreate p{
+    font-weight: bold;
+}
+
+.tripCreate label{
+    margin-top: 40px;
+}
+
+.tripCreate #nom {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: -10px;
+}
+
+.tripCreate #prenom {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: -10px;
+}
+
+.tripCreate #email {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: -10px;
+}
+
+.tripCreate #ville {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: -10px;
+}
+
+.tripCreate button{
+    
+   margin-top: 70px;
+   text-align: center;
+}

@@ -4291,7 +4291,7 @@
 		#footer input[type="email"],
 		#footer select,
 		#footer textarea {
-			background: rgba(255, 255, 255, 0.075);
+			background: rgba(225, 225, 225, 0.35);
 			border-color: rgba(255, 255, 255, 0.25);
 		}
 
