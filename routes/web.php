@@ -27,3 +27,6 @@ Route::Post('creation-trajet', 'CreationTrajetController@store');
 
 Route::get('demande-trajet', 'DemandeTrajetController@show')->name('demande-trajet');
 Route::Post('demande-trajet', 'DemandeTrajetController@store');
+
+
+

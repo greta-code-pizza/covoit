@@ -1,0 +1,40 @@
+.tripRequest{
+    text-align: center;
+}
+
+.tripRequest h1{
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.tripRequest p{
+   font-weight: bold;
+}
+
+.tripRequest label{
+    margin-top: 40px;
+}
+
+.tripRequest #nom {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.tripRequest #prenom {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.tripRequest #email {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.tripRequest button{
+    
+   margin-top: 70px;
+   text-align: center;
+}

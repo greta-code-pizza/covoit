@@ -4,7 +4,7 @@
 
 <!-- Header -->
 <header id="header">
-				<div class="logo"><a href="index.html">Covoit <span>GRETA Vannes</span></a></div>
+				<div class="logo"><a href="#">Covoit <span>GRETA Vannes</span></a></div>
 				<a href="#menu"><span>Menu</span></a>
 			</header>
 
@@ -101,7 +101,7 @@
 					</ul>
 
 					<div class="copyright">
-						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+					<p>&copy; Greta Kercode 2020 tous droits réservés</p>.
 					</div>
 
 				</div>

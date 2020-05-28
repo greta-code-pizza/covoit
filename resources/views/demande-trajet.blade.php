@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Demande de Trajet</title>
-</head>
+@extends ('layout')
+
 <body>
+    <section class="tripRequest">
     <h1>Demande de trajet</h1>
     <p>Vous êtes interessé par le trajet ("id") de ("ville") au GRETA de Vannes</p>
     <p>Veuillez renseigner les champs ci dessous fin de prendre contact avec le conducteur.</p>
@@ -36,11 +31,11 @@
         <div>
             <div>
                 <button type="submit">Envoyer</button>
-            </div>
-            <div>
+            
                 <button>Cancel</button>
             </div>
         </div>
     </form>
+    </section>
 </body>
 </html>
