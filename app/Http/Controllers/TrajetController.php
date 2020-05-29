@@ -8,18 +8,8 @@ use Illuminate\Support\Facades\Mail;
 
 class TrajetController extends Controller
 {
-    public static function generateToken()
-    {
-        $salt = "le sel c'est super";
-        $hash = hash('ripemd160', $_POST['email'] . $salt);
-        
-        
-        foreach (Contact::WHITELIST as $value) {
-            if (hash('ripemd160', $value . $salt) === $hash) {
-                return $hash;
-            }
-        }
-    }
+    
+   
 
     public function show()
     {
@@ -37,15 +27,17 @@ class TrajetController extends Controller
                
                 //Send mail to all member in the whitelist
                 foreach (Contact::WHITELIST as $contact) {
-                    Mail::html("<p>Un trajet de ". request('ville') ." au GRETA de Vannes a été crée par ". request('nom'). " " . request('prenom'). "</p>" .
+                    if ($contact != request('email')) {
+                        Mail::html("<p>Un trajet allant de ". request('ville') ." au GRETA de Vannes a été crée par ". request('nom'). " " . request('prenom'). "</p>" .
                     "<p>Si vous êtes interessé par ce trajet, veuillez cliquer sur le lien ci-dessous</p>" .
                     "<br>" .
-                    "<a href='http://covoit.test/demande-trajet/". TrajetController::generateToken()."'>". request('ville'). " au Greta de Vannes</a>"
-                    , function ($message) use ($contact) {
-
-                                $message->to($contact)
-                                        ->subject('Alerte création de trajet');
+                    "<a href='http://covoit.test/demande-trajet&token=". Contact::generateToken()."'>". request('ville'). " au Greta de Vannes</a>", function ($message) use ($contact) {
+                        $message->to($contact)
+                                ->subject('Alerte création de trajet');
                     });
+                    }else{
+                        return false;
+                    }
                 }
             });
 

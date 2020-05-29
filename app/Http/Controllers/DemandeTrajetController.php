@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -14,36 +15,26 @@ class DemandeTrajetController extends Controller
 
     public function store()
     {
+        $email = Contact::matchToken(request('token'));
+
         request()->validate(['email' => 'required|email']);
         //Send Email
-        Mail::raw('Votre demande de participation au trajet a été transmis au conducteur', function ($message){       
-            $message->to(request('email'))
-                    ->subject('Test Demande Trajet');
+        Mail::html(
+                    request('nom') . " " . request('prenom') . " est interressé pour faire le chemin avec vous" .
+                    "<br>".
+                    "Vous pouvez prendre contact avec cette personne à l'adresse suivante : ".
+                    "<br>".
+                    request('email')
+
+        , function ($message) use($email) {     
+            $message->to($email)
+                    ->subject('Nouvelle demande de trajet');
         });
 
         return "Votre participation à été prise en compte .".
-        "<br>".
+        "<br>" .
         "<a href='/'>Retour à l'accueil</a>";
 
     }
-    // public function storeTestToken()
-    // {
-    //     request()->validate(['email' => 'required|email']);
-    //     //Send Email
-    //     Mail::html(
-    //         request('nom') . " " . request('prenom') . " est interressé pour faire le chemin avec vous" .
-    //         "<br>".
-    //         "Vous pouvez prendre contact avec cette personne à l'adresse suivante : ".
-    //         "<br>".
-    //         request('email')
-        
-        
-    //     , function ($message){       
-    //         $message->to(request('email'))
-    //                 ->subject('test token');
-    //     });
-
-    //     return redirect('/');
-
-    // }
+    
 }

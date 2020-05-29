@@ -5,8 +5,9 @@
     <h1>Demande de trajet</h1>
     <p>Vous êtes interessé par le trajet ("id") de ("ville") au GRETA de Vannes</p>
     <p>Veuillez renseigner les champs ci dessous fin de prendre contact avec le conducteur.</p>
-    <form method="POST" action="/demande-trajet">
+    <form method="POST" action="{{route('demande-trajet')}}">
         @csrf
+        <input type="hidden" name="token" value="{{request()->route('token')}}">
         <div>
             <label>Nom</label><br>
             <input type="text" name="nom" id="nom">
