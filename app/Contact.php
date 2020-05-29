@@ -9,5 +9,6 @@ class Contact extends Model
    const WHITELIST = array(
        'test@test.com',
        'plop@plop.com',
+       'gaylor273@outlook.fr'
    );
 }
