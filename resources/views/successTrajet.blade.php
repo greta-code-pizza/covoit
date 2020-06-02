@@ -7,7 +7,7 @@
     <title>Contact</title>
 </head>
 <body>
-    <p>Votre Trajet a bien été ajouté.</p>
+    <p>Votre trajet a bien été ajouté.</p>
     <a href='/'>Retour à l'accueil</a>
 </body>
 </html>
