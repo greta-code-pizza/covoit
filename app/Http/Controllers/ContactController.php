@@ -27,11 +27,7 @@ class ContactController extends Controller
         "<a href=/>Retour à l'accueil</a>";
         }        
         else{
-            return "Vous n'êtes pas inscrit à la Mailing List".
-            "<br>".
-            "Pour vous inscrire, veuillez contacter un administrateur sur ..........".
-            "<br>".
-            "<a href=/>Retour à l'accueil</a>";   
+            return redirect('/erreur');   
         }        
     }
   }
