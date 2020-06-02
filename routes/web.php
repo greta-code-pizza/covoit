@@ -21,7 +21,15 @@ Route::get('/', function () {
 Route::get('/erreur', function () {
     return view('errorToken');
 });
-
+Route::get('/succesMailing', function () {
+    return view('succesMailing');
+});
+Route::get('/succesParticipation', function () {
+    return view('succesParticipation');
+});
+Route::get('/succesTrajet', function () {
+    return view('succesTrajet');
+});
 Route::get('contact', 'ContactController@show')->name('contact');
 Route::Post('contact', 'ContactController@store');
 

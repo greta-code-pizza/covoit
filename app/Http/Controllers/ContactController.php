@@ -22,9 +22,7 @@ class ContactController extends Controller
             //     $message->to(request('email'))
             //             ->subject('Test création trajet');
             // });
-        return "Vous êtes bien inscrit à la Mailing Liste".
-        "<br>".
-        "<a href=/>Retour à l'accueil</a>";
+            return redirect('/succesMailing');
         }        
         else{
             return redirect('/erreur');   
