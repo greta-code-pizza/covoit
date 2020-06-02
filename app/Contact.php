@@ -11,6 +11,7 @@ class Contact extends Model
        'plop@plop.com',
        'passager.covoit@gmail.com',
        'conducteur.covoit@gmail.com',
+       'test1@test.com'
        
    );
 

@@ -31,9 +31,7 @@ class DemandeTrajetController extends Controller
                     ->subject('Nouvelle demande de trajet');
         });
 
-        return "Votre participation à été prise en compte .".
-        "<br>" .
-        "<a href='/'>Retour à l'accueil</a>";
+        return redirect('/successParticipation');
 
     }
     

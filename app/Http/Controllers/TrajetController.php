@@ -35,13 +35,11 @@ class TrajetController extends Controller
                         $message->to($contact)
                                 ->subject('Alerte création de trajet');
                     });
-                    }else{
-                        return false;
                     }
                 }
             });
 
-            return "Votre trajet à bien été crée" . "<br>" . "<a href='/'>Retour à l'accueil</a>";
+            return view('successTrajet');
         } else {
             return redirect('/erreur');
         }

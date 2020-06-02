@@ -18,23 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/erreur', function () {
-    return view('errorToken');
-});
-Route::get('/succesMailing', function () {
-    return view('succesMailing');
-});
-Route::get('/succesParticipation', function () {
-    return view('succesParticipation');
-});
-Route::get('/succesTrajet', function () {
-    return view('succesTrajet');
-});
+
 Route::get('contact', 'ContactController@show')->name('contact');
 Route::Post('contact', 'ContactController@store');
 
 Route::get('creation-trajet', 'TrajetController@show')->name('creation-trajet');
-Route::Post('creation-trajet', 'TrajetController@store');
+Route::Post('creation-trajet', 'TrajetController@store')->name('succesTrajet');
 
 Route::get('demande-trajet','DemandeTrajetController@show')->name('demande-trajet');
 Route::Post('demande-trajet','DemandeTrajetController@store');
@@ -42,5 +31,17 @@ Route::Post('demande-trajet','DemandeTrajetController@store');
 Route::get('demande-trajet&token={token}',function () {
     return view("demande-trajet");
 });
+Route::get('/erreur', function () {
+    return view('errorToken');
+});
+Route::get('/successMailing', function () {
+    return view('successMailing');
+});
+Route::get('/successParticipation', function () {
+    return view('successParticipation');
+});
+// Route::get('/succesTrajet', function () {
+//     return view('succesTrajet');
+// });
 // Route::get('demande-trajet', 'DemandeTrajetController@show')->name('demande-trajet');
 // Route::Post('demande-trajet', 'DemandeTrajetController@store');

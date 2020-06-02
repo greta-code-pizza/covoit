@@ -22,7 +22,7 @@ class ContactController extends Controller
             //     $message->to(request('email'))
             //             ->subject('Test création trajet');
             // });
-            return redirect('/succesMailing');
+            return redirect('/successMailing');
         }        
         else{
             return redirect('/erreur');   
