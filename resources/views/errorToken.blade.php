@@ -7,6 +7,6 @@
     <title>Contact</title>
 </head>
 <body>
-    <p>Votre email n'est pas dans la mailing list, contactez un administrateur sur ... pour y remédier.</p>
+    <p>Votre email n'est pas dans la mailing list, contactez l'utilisateur #0721 sur le discord du GRETA Vannes pour y remédier.</p>
 </body>
 </html>
