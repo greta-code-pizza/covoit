@@ -17,7 +17,7 @@ class ContactController extends Controller
     {
         request()->validate(['email' => 'required|email']);
         //Send Email
-        if (in_array(request('email'), Contact::WHITELIST) === true) {
+        if (in_array(request('email'), Contact::getMail()) === true) {
             // Mail::raw('Le trajet de ' . request('ville') . ' au GRETA a été crée', function ($message) {
             //     $message->to(request('email'))
             //             ->subject('Test création trajet');
