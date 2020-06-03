@@ -32,9 +32,8 @@
         <div>
             <div>
                 <button type="submit">Envoyer</button>
-            </div>
-            <div>
-                <a href="/">Cancel</a>
+            
+            <button> <a href="/">Cancel</a></button>
             </div>
         </div>
     </form>
