@@ -12,6 +12,10 @@
 		<link rel="stylesheet" href="assets/css/contact.css" />
 		<link rel="stylesheet" href="assets/css/tripRequest.css" />
 		<link rel="stylesheet" href="assets/css/tripCreate.css" />
+		<link rel="stylesheet" href="assets/css/successMailing.css" />
+		<link rel="stylesheet" href="assets/css/successTrajet.css" />
+		<link rel="stylesheet" href="assets/css/successParticipation.css" />
+		<link rel="stylesheet" href="assets/css/errorToken.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
