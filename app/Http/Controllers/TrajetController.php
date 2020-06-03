@@ -31,7 +31,7 @@ class TrajetController extends Controller
                         Mail::html("<p>Un trajet allant de ". request('ville') ." au GRETA de Vannes a été crée par ". request('nom'). " " . request('prenom'). "</p>" .
                     "<p>Si vous êtes interessé par ce trajet, veuillez cliquer sur le lien ci-dessous</p>" .
                     "<br>" .
-                    "<a href='http://covoit.test/demande-trajet&token=". Contact::generateToken()."'>". request('ville'). " au Greta de Vannes</a>", function ($message) use ($contact) {
+                    "<a href='http://covoit-greta.herokuapp.com/demande-trajet&token=". Contact::generateToken()."'>". request('ville'). " au Greta de Vannes</a>", function ($message) use ($contact) {
                         $message->to($contact)
                                 ->subject('Alerte création de trajet');
                     });
