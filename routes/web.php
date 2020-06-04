@@ -32,7 +32,7 @@ Route::get('demande-trajet&token={token}',function () {
     return view("demande-trajet");
 });
 Route::get('/erreur', function () {
-    return view('errorToken');
+    return view('verifIntermediaire');
 });
 Route::get('/successMailing', function () {
     return view('successMailing');
@@ -40,8 +40,5 @@ Route::get('/successMailing', function () {
 Route::get('/successParticipation', function () {
     return view('successParticipation');
 });
-// Route::get('/succesTrajet', function () {
-//     return view('succesTrajet');
-// });
-// Route::get('demande-trajet', 'DemandeTrajetController@show')->name('demande-trajet');
-// Route::Post('demande-trajet', 'DemandeTrajetController@store');
+
+Route::Post('inscription','InscriptionController@store');
