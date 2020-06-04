@@ -3,7 +3,6 @@
 <body>
     <section class="tripRequest">
     <h1>Demande de trajet</h1>
-    <p>Vous êtes interessé par le trajet ("id") de ("ville") au GRETA de Vannes</p>
     <p>Veuillez renseigner les champs ci dessous fin de prendre contact avec le conducteur.</p>
     <form method="POST" action="{{route('demande-trajet')}}">
         @csrf
