@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -38,7 +39,12 @@ class TrajetController extends Controller
                     }
                 }
             });
-
+            
+        
+            $token = Contact::generateToken();
+            $depart = request('ville');
+            $data = array('token'=> $token,'depart'=> $depart);
+            DB::table('trajets')->insert($data);
             return view('successTrajet');
         } else {
             return redirect('/erreur');
