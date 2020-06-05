@@ -1,0 +1,40 @@
+.verifIntermediaire{
+    text-align: center;
+}
+
+.verifIntermediaire h1{
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.verifIntermediaire p{
+   font-weight: bold;
+}
+
+.verifIntermediaire label{
+    margin-top: 40px;
+}
+
+.verifIntermediaire #nom {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.verifIntermediaire #prenom {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.verifIntermediaire #email {
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.verifIntermediaire button{
+    
+   margin-top: 70px;
+   text-align: center;
+}
