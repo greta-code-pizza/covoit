@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="assets/css/successMailing.css" />
 		<link rel="stylesheet" href="assets/css/successTrajet.css" />
 		<link rel="stylesheet" href="assets/css/successParticipation.css" />
+		<link rel="stylesheet" href="assets/css/verifIntermediaire.css" />
 		<link rel="stylesheet" href="assets/css/errorToken.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>

@@ -1,7 +1,8 @@
-
+@extends ('layout')
 <body>
+    <section class="verifIntermediaire">
     <h1>Demande d'inscription</h1>
-    <p>Vous n'êtes pas présent dans notre White-Liste et vous voulez vous inscrire ?</p>
+    <p>Vous n'êtes pas présent dans notre White-Liste et vous souhaitez vous inscrire ?</p>
     <p>Veuillez remplir ce formulaire afin d'en faire la demande.</p>
     <form method="POST" action="/inscription" enctype="multipart/form-data">
         @csrf
@@ -41,5 +42,6 @@
             </div>
         </div>
     </form>
+    </section>
 </body>
 </html>
