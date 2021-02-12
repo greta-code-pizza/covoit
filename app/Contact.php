@@ -16,11 +16,11 @@ class Contact extends Model
    public static function generateToken()
    {
        $salt = "le sel c'est super";
-       $hash = hash('ripemd160', $_POST['email'] . $salt);
+       $hash = hash('ripemd160', request('email') . request('ville') . $salt);
        
        
        foreach (Contact::getMail() as $value) {
-           if (hash('ripemd160', $value . $salt) === $hash) {
+           if (hash('ripemd160', $value . request('ville') . $salt) === $hash) {
                return $hash;
            }
        }
